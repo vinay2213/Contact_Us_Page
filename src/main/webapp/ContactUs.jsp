@@ -11,24 +11,26 @@
 
 <body>
 		
-		<div class="abc">
+		<div class="abcd">
 			<div>
-		<h1>Contact Us</h1>
+				<h1>Contact Us</h1>
+				</div>
+				Please fill this form in a descent manner
+			
 		</div>
-		Please fill this form in a descent manner	
-		</div>
+		
 		
 	
-		<form action="contactus" method="post">
-		
-		<label for="name1"><h3>Full Name <span style='color: red'> * </span></h3></label> 
+	<form action="contactus" method="post">
+	
+		<label> <h3> Full Name <span style='color: red'> * </span> </h3> </label> 
 		<input type="text" name="name1" required /> <br /> <br /> 
 		
-		<label for="email"><h3>E-mail <span style='color: red'> * </span></h3></label> 
+		<label><h3>E-mail <span style='color: red'> * </span></h3></label> 
 		<input type="text" name="email1" required /> <br />
 		example@example.com <br /> <br /> 
 		
-		<label for="message"><h3> Message <span style='color: red'> * </span></h3></label> 
+		<label><h3> Message <span style='color: red'> * </span></h3></label> 
 		<input type="text" name="message" required /> <br /> <br /> 
 		<input type="submit" value="SUBMIT">
 		

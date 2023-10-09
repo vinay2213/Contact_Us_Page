@@ -19,7 +19,7 @@ public class ContactUs extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		RequestDispatcher rd = req.getRequestDispatcher("/ContactUs.jsp");
-		rd.include(req, resp);
+		rd.forward(req, resp);
 	}
 
 	@Override

@@ -9,6 +9,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/admin/login")
 public class AdminLogin extends HttpServlet{
@@ -27,6 +28,8 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	String password = req.getParameter("password");
 	
 	if(email.equals("vinaygoyal0460@gmail.com") && password.equals("H@rdt0remember")) {
+		HttpSession session = req.getSession();
+		session.setAttribute("login", "true");
 		
 		resp.sendRedirect("/Contact_Us_Page/admin/contactus/requests");
 		
@@ -36,6 +39,4 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 		out.print("Invalid credentials");
 	}
 }
-
-
 }

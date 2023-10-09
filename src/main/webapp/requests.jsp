@@ -9,6 +9,15 @@
 <title>Requests</title>
 
 </head>
+
+<% 
+	String s = request.getContextPath();
+	if(session.getAttribute("login") != "true") {
+		response.sendRedirect(s+"/admin/login");
+	}
+
+%>
+
 <body>
 	
 	<table>
@@ -59,6 +68,7 @@
 	
 	
 	
+	
 	<table>
 		<tr>
 			<th>ID</th>
@@ -105,6 +115,6 @@
 		%>
 
 	</table>
-	
+
 </body>
 </html>
